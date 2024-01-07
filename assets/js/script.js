@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
  * and after the user's answer has been processed
  */
 function runGame(gameType) {
+    // empty startbox, no need to erase old answer before adding a new one
+    document.getElementById("answer-box").value = "";
+    //the marker starts directly in the box when page loads, no need to click the box 
+    document.getElementById("answer-box").focus();
 
     // Creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
